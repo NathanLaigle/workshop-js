@@ -11,7 +11,6 @@ exports.get = async (req, res, next) => {
 
 exports.post = async (req, res, next) => {
   try {
-    console.log(req.body);
     const user = await User.create({
       name: req.body.name,
       password: req.body.password,
