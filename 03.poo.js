@@ -1,3 +1,26 @@
+// function person(args) {
+//   const { prenom, nom, pseudo, age } = args;
+//   this.nom = nom;
+//   this.prenom = prenom;
+//   this.pseudo = pseudo;
+//   this.age = age || 'Non renseigné';
+//   this.getFullName = () => {
+//     return `Full name : ${this.prenom} ${this.nom} (${this.pseudo})`;
+//   };
+//   this.getInitial = () => {
+//     const nom = this.nom.charAt(0);
+//     const prenom = this.prenom.charAt(0);
+
+//     return `${nom}${prenom}`;
+//   };
+// }
+
+// const Jules = new person({
+//   prenom: 'Jules',
+//   nom: 'LEMAIRE',
+//   pseudo: 'jules77',
+// })
+
 class Personne {
   constructor(args) {
     const { prenom, nom, pseudo, age } = args;
@@ -33,6 +56,14 @@ console.log(Jules.getFullName());
 console.log(Paul.getFullName());
 
 Jules.pseudo = 'jules44';
+
+/**
+ * Avec fonction :
+ *
+ * person.prototype.age = "non renseiné"
+ *
+ */
+
 Jules.age = 30;
 
 console.log('Jules after update : ', Jules.getFullName());
